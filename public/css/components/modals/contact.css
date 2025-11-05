@@ -1,0 +1,54 @@
+/* =================================================================
+ * Estilos para o Modal de Contato (Revisado)
+ * =================================================================
+ */
+
+.contact-body {
+    padding: 2rem;
+    line-height: 1.7;
+}
+
+.contact-body p {
+    margin: 0 0 1.5em 0;
+    color: var(--text-muted);
+}
+
+.contact-body p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-body code {
+    background-color: var(--markdown-code-bg);
+    color: var(--accent-blue);
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+}
+
+.contact-call-to-action {
+    text-align: center;
+}
+
+/* ====================================================== */
+/* CORREÇÃO AQUI: Seletor agora é mais específico         */
+/* ====================================================== */
+.contact-call-to-action .contact-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #1a1b26; 
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-call-to-action .contact-button:hover {
+    background-color: #9aaef7;
+    transform: translateY(-2px);
+    /* Garante que a cor do texto não mude no hover por outra regra */
+    color: #1a1b26; 
+}

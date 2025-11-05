@@ -1,0 +1,16 @@
+:root {
+    --bg-color: #1a1b26;
+    --window-bg: #24283b;
+    --header-bg: #1f2335;
+    --input-bg: #2a2f41;
+    --text-color: #c0caf5;
+    --text-muted: #a9b1d6;
+    --accent-color: #7aa2f7;
+    --accent-blue: #89ddff;
+    --border-color: #3b4261;
+    --folder-color: #ff9e64;
+    --file-color: #9ece6a;
+    --project-color: #f7768e;
+    --markdown-code-bg: #2d334a;
+    --accent-color-rgb: 122, 162, 247;
+}

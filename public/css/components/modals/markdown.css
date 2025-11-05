@@ -1,0 +1,20 @@
+/* Estilos para o Modal de Markdown (.md) */
+.markdown-modal-content { max-width: 800px; width: 90%; }
+.markdown-body { padding: 2.5rem; overflow-y: auto; line-height: 1.7; font-family: 'Ubuntu', sans-serif; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 { font-weight: 600; margin-top: 1.5em; margin-bottom: 1em; }
+.markdown-body h1 { font-size: 2.5rem; color: var(--accent-blue); border-bottom: none; text-align: center; margin-top: 0; }
+.markdown-body h2 { font-size: 1.7em; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5em; }
+.markdown-body h3 { font-size: 1.4em; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5em; font-weight: 500; }
+.markdown-body h4 { font-size: 1.2em; color: var(--text-color); }
+.markdown-body p { margin: 0 0 1em 0; }
+.markdown-body strong { font-weight: 600; color: var(--text-color); }
+.markdown-body hr { border: none; border-top: 2px solid var(--border-color); margin: 2.5em 0; }
+.markdown-body ul, .markdown-body ol { padding-left: 2em; margin-bottom: 1em; }
+.markdown-body li { margin-bottom: 0.5em; }
+.markdown-body a { color: var(--accent-color); }
+.markdown-body code { background-color: var(--markdown-code-bg); color: var(--accent-blue); padding: 0.2em 0.4em; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 0.9em; }
+.markdown-body pre { background-color: var(--markdown-code-bg); padding: 1em; border-radius: 8px; overflow-x: auto; border: 1px solid var(--border-color); }
+.markdown-body pre code { padding: 0; background-color: transparent; border-radius: 0; }
+.title-with-logo { display: flex; align-items: center; justify-content: space-between; gap: 2rem; width: 100%; margin-bottom: 1.5rem; }
+.title-with-logo img { width: 150px; height: 150px; object-fit: contain; border: none; flex-shrink: 0; border-radius: 8px; }
+.title-with-logo h1 { font-size: 2.5rem; color: var(--accent-blue); border-bottom: none; margin: 0; padding: 0; text-align: left; }

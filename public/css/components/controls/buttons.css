@@ -1,0 +1,64 @@
+/* =================================================================
+ * Estilos para Controles da UI (Botões de Som e Música)
+ * =================================================================
+ */
+
+.sound-toggle-button,
+.music-toggle-button {
+    position: fixed;
+    z-index: 2000;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sound-toggle-button:hover,
+.music-toggle-button:hover {
+    background-color: #3b4261;
+    color: var(--text-color);
+}
+
+.sound-toggle-button svg,
+.music-toggle-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* --- Botão de Som (Canto Superior Esquerdo) --- */
+.sound-toggle-button {
+    top: 1rem;
+    left: 1rem;
+}
+
+.icon-sound-off { display: none; }
+.sound-toggle-button.muted .icon-sound-on { display: none; }
+.sound-toggle-button.muted .icon-sound-off { display: block; }
+
+
+/* --- Botão de Música (Canto Inferior Direito) --- */
+.music-toggle-button {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.music-toggle-button svg {
+    fill: none;
+    stroke: currentColor;
+}
+
+.icon-music-off { display: none; }
+.music-toggle-button.playing .icon-music-on { display: none; }
+.music-toggle-button.playing .icon-music-off { display: block; }

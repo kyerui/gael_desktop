@@ -1,0 +1,38 @@
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Estilos para as Barras de Rolagem */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) var(--input-bg);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--input-bg);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 5px;
+    border: 2px solid var(--input-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #545c7e;
+}

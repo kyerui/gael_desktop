@@ -1,0 +1,10 @@
+/* Estilos para o Modal de Arquivo de Texto */
+.modal-body {
+    font-family: 'Fira Code', monospace;
+    white-space: pre-wrap;
+    background-color: var(--input-bg);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px; /* Arredonda apenas os cantos de baixo */
+    max-height: 50vh;
+    overflow-y: auto;
+}

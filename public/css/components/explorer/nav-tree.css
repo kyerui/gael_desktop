@@ -1,0 +1,29 @@
+/* =================================================================
+ * Estilos do Componente: Árvore de Navegação
+ * =================================================================
+ */
+
+.nav-pane {
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: auto; 
+    border-right: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.1);
+}
+
+.nav-tree, .nav-tree ul { list-style: none; padding-left: 0; margin: 0; }
+.nav-tree ul { padding-left: 1rem; border-left: 1px solid var(--border-color); margin-left: 0.5rem; }
+.nav-tree li { padding: 0; border-radius: 5px; margin-top: 0.2rem; font-size: 0.9rem; display: flex; flex-direction: column; align-items: flex-start; }
+.nav-tree .active > .tree-item-label { color: var(--accent-color); font-weight: 500; background-color: rgba(122, 162, 247, 0.15); }
+.nav-tree .tree-icon { width: 16px; height: 16px; flex-shrink: 0; }
+.nav-tree .tree-icon-folder { fill: var(--folder-color); }
+.nav-tree .tree-icon-file { fill: var(--file-color); }
+.tree-icon-project { stroke: var(--project-color); }
+.tree-icon-markdown { stroke: var(--accent-color); }
+.nav-tree li > ul { display: none; }
+.nav-tree li.expanded > ul { display: block; }
+.tree-toggler { width: 0; height: 0; margin-right: 5px; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 6px solid var(--text-muted); cursor: pointer; transition: transform 0.2s ease; flex-shrink: 0; }
+.nav-tree li.expanded > .tree-item-label > .tree-toggler { transform: rotate(90deg); }
+.tree-item-label { display: flex; align-items: center; gap: 0.5rem; width: 100%; padding: 0.4rem 0.5rem; border-radius: 5px; cursor: pointer; transition: background-color 0.2s ease; box-sizing: border-box; }
+.tree-item-label:hover { background-color: rgba(122, 162, 247, 0.1); }
+.tree-item-label span { white-space: nowrap; }

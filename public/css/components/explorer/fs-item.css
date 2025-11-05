@@ -1,0 +1,45 @@
+/* =================================================================
+ * Estilos do Componente: Ítem de Arquivo/Pasta (fs-item)
+ * =================================================================
+ */
+
+.fs-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-align: center;
+}
+
+.fs-item:hover {
+    background-color: rgba(122, 162, 247, 0.1);
+    transform: translateY(-2px);
+}
+
+.fs-item svg {
+    width: 64px;
+    height: 64px;
+}
+
+.fs-item[data-type="folder"] svg { fill: var(--folder-color); }
+.fs-item[data-type="file"] svg { fill: var(--file-color); }
+.fs-item[data-type="project"] svg { stroke: var(--project-color); }
+.fs-item[data-type="markdown"] svg { stroke: var(--accent-color); }
+.fs-item[data-type="links"] svg { width: 56px; height: 56px; }
+
+.fs-item span {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.fs-item.image-item { padding: 0; background-color: var(--input-bg); border: 1px solid var(--border-color); overflow: hidden; }
+.fs-item .item-thumbnail { width: 100%; height: 100px; object-fit: cover; object-position: top; transition: transform 0.2s ease; }
+.fs-item.image-item:hover .item-thumbnail { transform: scale(1.1); }
+.fs-item.image-item span { padding: 0.5rem; background-color: rgba(0,0,0,0.2); width: 100%; box-sizing: border-box; }
+.fs-item.gallery-icon-mode { width: 120px; height: 120px; padding: 0; gap: 0; }
+.fs-item.gallery-icon-mode .item-thumbnail { height: 100%; }

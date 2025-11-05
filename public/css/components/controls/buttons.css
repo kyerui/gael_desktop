@@ -1,8 +1,3 @@
-/* =================================================================
- * Estilos para Controles da UI (Botões de Som e Música)
- * =================================================================
- */
-
 .sound-toggle-button,
 .music-toggle-button {
     position: fixed;
@@ -37,7 +32,6 @@
     stroke-linejoin: round;
 }
 
-/* --- Botão de Som (Canto Superior Esquerdo) --- */
 .sound-toggle-button {
     top: 1rem;
     left: 1rem;
@@ -47,8 +41,6 @@
 .sound-toggle-button.muted .icon-sound-on { display: none; }
 .sound-toggle-button.muted .icon-sound-off { display: block; }
 
-
-/* --- Botão de Música (Canto Inferior Direito) --- */
 .music-toggle-button {
     bottom: 1rem;
     right: 1rem;

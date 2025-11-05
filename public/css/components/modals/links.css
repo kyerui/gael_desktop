@@ -1,14 +1,9 @@
-/* =================================================================
- * Estilos para o Modal de Links
- * =================================================================
- */
-
 .links-info-box {
     text-align: center;
     padding: 0.75rem;
     background-color: rgba(0,0,0,0.2);
     border-radius: 8px;
-    margin-top: 2rem; /* Adiciona espaço acima da caixa */
+    margin-top: 2rem;
     color: var(--text-muted);
     border: 1px solid var(--border-color);
 }
@@ -23,22 +18,20 @@
 
 .link-button {
     display: flex;
-    /* ATUALIZADO: Muda a direção para empilhar os itens verticalmente */
     flex-direction: column; 
-    /* ATUALIZADO: Centraliza o conteúdo (ícone e texto) */
     justify-content: center; 
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem; /* Ajustado para um visual mais quadrado */
+    padding: 1rem;
     background-color: var(--input-bg);
     border-radius: 8px;
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem; /* Levemente ajustado */
+    font-size: 1rem;
     font-weight: 500;
     transition: background-color 0.2s ease, transform 0.2s ease;
     border: 1px solid var(--border-color);
-    min-width: 120px; /* Garante que os botões tenham uma largura mínima agradável */
+    min-width: 120px;
 }
 
 .link-button:hover {
@@ -48,7 +41,6 @@
 }
 
 .link-button .link-icon {
-    /* ATUALIZADO: Ícones um pouco maiores para o novo layout */
     width: 32px;
     height: 32px;
     fill: currentColor;

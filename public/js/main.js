@@ -126,9 +126,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         else if (type === 'about') { modalController.showAboutModal(); }
     });
 
-    // ======================================================
-    // LÓGICA DE CLIQUE DA ÁRVORE CORRIGIDA
-    // ======================================================
     dom.navPane.addEventListener('click', (e) => {
         const targetElement = e.target;
         const targetLi = targetElement.closest('li');
@@ -136,7 +133,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const path = targetLi.dataset.path;
         
-        // Se clicar no toggler (seta), apenas alterna o estado e para
         if (targetElement.classList.contains('tree-toggler')) {
             e.stopPropagation();
             if (state.expandedPaths.has(path)) {
@@ -148,7 +144,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // Lida com cliques em arquivos virtuais primeiro
         if (targetLi.dataset.virtual === 'true') { modalController.showAboutModal(); return; }
         if (targetLi.dataset.isContact === 'true') { modalController.showContactModal(); return; }
         if (targetLi.dataset.isLinks === 'true') { modalController.showLinksModal(); return; }
@@ -156,19 +151,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const type = targetLi.dataset.type;
         
-        // Se clicar no nome de uma pasta
         if (type === 'folder') {
             playSound('open');
-            // Alterna o estado de expansão
+
             if (state.expandedPaths.has(path)) {
                 state.expandedPaths.delete(path);
             } else {
                 state.expandedPaths.add(path);
             }
-            // E navega para a pasta
+
             state.currentPath = path === '/' ? [] : path.substring(1).split('/');
-            updateUI(); // Redesenha tudo para refletir as mudanças
-        } else { // É um arquivo
+            updateUI();
+        } else {
             if (targetLi.dataset.isMarkdown === 'true') { modalController.showMarkdownModal(path); }
             else if (targetLi.dataset.isProject === 'true') { modalController.showProjectModal(path); } 
             else if (targetLi.dataset.isImage === 'true') { modalController.showImageModal(targetLi.dataset.url); } 

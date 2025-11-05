@@ -5,18 +5,12 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Variável de versão para Cache Busting
 const CACHE_VERSION = Date.now();
-
-// O nome correto da pasta que contém os arquivos a serem explorados
 const SAFE_ROOT_DIRECTORY = path.resolve(__dirname, 'files_to_explore');
 
-// Middleware para servir arquivos estáticos (CSS, JS, imagens, etc.) da pasta 'public'
 app.use(express.static('public'));
-// Middleware para servir as imagens e outros arquivos da pasta 'files_to_explore' sob o prefixo /files
 app.use('/files', express.static(SAFE_ROOT_DIRECTORY));
 
-// Rota principal para servir o index.html dinamicamente, injetando a versão do cache
 app.get('/', async (req, res) => {
     try {
         let indexHtml = await fs.readFile(path.join(__dirname, 'public', 'index.html'), 'utf-8');
@@ -28,7 +22,6 @@ app.get('/', async (req, res) => {
     }
 });
 
-// Função auxiliar para criar nós de arquivo, identificando tipos especiais (.md, .proj.json, imagens)
 async function createFileNode(itemPath, entry) {
     const extension = path.extname(entry.name).toLowerCase();
     const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg'];
@@ -46,7 +39,6 @@ async function createFileNode(itemPath, entry) {
     };
 }
 
-// Função recursiva para ler a estrutura de diretórios e construir a árvore de navegação
 async function buildFileTree(directory) {
     const name = path.basename(directory);
     let relativePath = directory.substring(SAFE_ROOT_DIRECTORY.length).replace(/\\/g, '/');
@@ -74,7 +66,6 @@ async function buildFileTree(directory) {
     return item;
 }
 
-// Endpoint que fornece a estrutura completa da árvore para o painel de navegação esquerdo
 app.get('/api/tree', async (req, res) => {
     try {
         const tree = await buildFileTree(SAFE_ROOT_DIRECTORY);
@@ -85,7 +76,6 @@ app.get('/api/tree', async (req, res) => {
     }
 });
 
-// Endpoint que fornece o conteúdo de um diretório específico para o painel de conteúdo principal
 app.get('/api/files', async (req, res) => {
     try {
         const requestedPath = req.query.path || '/';
@@ -112,7 +102,6 @@ app.get('/api/files', async (req, res) => {
     }
 });
 
-// Endpoint que lê e retorna o conteúdo de um arquivo (.txt, .md, .proj.json)
 app.get('/api/content', async (req, res) => {
     try {
         const requestedPath = req.query.path;

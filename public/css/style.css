@@ -1,25 +1,14 @@
-/* =================================================================
- * ARQUIVO CSS PRINCIPAL
- * Este arquivo importa todos os outros módulos de estilo.
- * A ordem é importante: Base -> Layout -> Componentes
- * =================================================================
- */
-
-/* 1. Base (Variáveis e Estilos Globais) */
 @import url('base/variables.css');
 @import url('base/global.css');
 
-/* 2. Layout (Estrutura Principal da Aplicação) */
 @import url('layout/explorer.css');
 @import url('layout/responsive.css');
 
-/* 3. Componentes (Partes Reutilizáveis da UI) */
 @import url('components/explorer/nav-tree.css');
 @import url('components/explorer/fs-item.css');
 @import url('components/sections/content.css');
 @import url('components/controls/buttons.css');
 
-/* 4. Modais (Componentes Específicos) */
 @import url('components/modals/common.css');
 @import url('components/modals/file.css');
 @import url('components/modals/about.css');

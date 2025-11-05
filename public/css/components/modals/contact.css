@@ -1,8 +1,3 @@
-/* =================================================================
- * Estilos para o Modal de Contato (Revisado)
- * =================================================================
- */
-
 .contact-body {
     padding: 2rem;
     line-height: 1.7;
@@ -30,9 +25,6 @@
     text-align: center;
 }
 
-/* ====================================================== */
-/* CORREÇÃO AQUI: Seletor agora é mais específico         */
-/* ====================================================== */
 .contact-call-to-action .contact-button {
     display: inline-block;
     margin-top: 1rem;
@@ -49,6 +41,5 @@
 .contact-call-to-action .contact-button:hover {
     background-color: #9aaef7;
     transform: translateY(-2px);
-    /* Garante que a cor do texto não mude no hover por outra regra */
     color: #1a1b26; 
 }

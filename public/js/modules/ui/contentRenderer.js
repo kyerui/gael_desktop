@@ -73,7 +73,7 @@ export function renderContentPane(items, path) {
                     itemDiv.innerHTML = `<img src="${item.url}" alt="${item.name}" class="item-thumbnail"><span>${item.name}</span>`;
                 }
                 break;
-            default: // Arquivo de texto padrão
+            default:
                 itemDiv.dataset.type = 'file';
                 itemDiv.dataset.path = item.path;
                 itemDiv.innerHTML = `${createIcon(dom.FILE_SVG_PATHS)}<span>${item.name}</span>`;

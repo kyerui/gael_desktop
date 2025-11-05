@@ -1,6 +1,10 @@
 # Portfólio Interativo - Explorador de Arquivos
 
-Este é um projeto de portfólio pessoal construído com Node.js, Express e JavaScript modular. Ele simula a interface de um explorador de arquivos de sistema operacional, onde cada arquivo e pasta funciona como um link para uma seção do meu portfólio, exibindo informações em modais customizados.
+**Link para o repositório -** [GitHub - gael_desktop](https://github.com/kyerui/gael_desktop)
+
+### Descrição
+
+**Este é um projeto de portfólio pessoal construído com Node.js, Express e JavaScript modular. Ele simula a interface de um explorador de arquivos de sistema operacional, onde cada arquivo e pasta funciona como um link para uma seção do meu portfólio, exibindo informações em modais customizados.**
 
 ## Funcionalidades
 

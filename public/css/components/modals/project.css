@@ -1,9 +1,0 @@
-/* Estilos para o Modal de Projeto (.proj.json) */
-.project-modal-content { max-width: 800px; width: 90%; }
-.project-body { padding: 2rem; overflow-y: auto; line-height: 1.7; }
-.project-meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; color: var(--text-muted); }
-.project-meta strong { color: var(--accent-color); font-weight: 500; }
-.project-meta a { color: var(--accent-color); text-decoration: none; font-weight: 500; }
-.project-meta a:hover { text-decoration: underline; }
-.project-description p { margin: 0 0 1em 0; }
-.project-description p:last-child { margin-bottom: 0; }
